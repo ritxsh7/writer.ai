@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700&family=Kanit:wght@400;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* =======================================MAIN APP================================================== */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: 'Kanit', sans-serif;
+    width: 100vw;
+}
+
+:root{
+    --primary-color : #e6eaf3;
+    --secondary-color : #0f53f2;
+    --bg-color : #151046;
+    --g-color-1 : #573ced;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+/* =========================================APP===================================================== */
+
+.app{
+    width: 100%;
+    overflow-x: hidden;
+    height: 100vh;
+    background: url('./assets/bg.png');
+    background-size: cover;
+}
+
+.main{
+    width: 100vw;
+    display: flex;
+}
+
+/* ===========================================FORM SECTION========================================== */
+.form{
+    height: 75vh;
+    float: left;
+    width: 35%;
+    margin: 3.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    box-shadow: hsla(0, 0%, 83%, 0.575) 0px 0px 40px 1px;
+    border-radius: 1rem;
+    background-color: #E6EAF3;
+}
+
+.form input[type="text"]{
+    margin: 0.2rem 0;
+    height: 3rem;
+    outline: 0;
+    border: 2px solid #0f53f2;
+    border-radius: 0.3rem;
+    padding: 0 0.3rem;
+}
+
+.form select option{
+    color: #0f53f2;
+}
+
+.form h1{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.418);
+}
+
+.text-gradient{
+    background: -webkit-linear-gradient(270deg, #92b3fe 1.79%, #0F53F2 95.54%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.form button{
+    padding: 0.8rem 2.2rem;
+    background: -webkit-linear-gradient(270deg, #84a9ff 1.79%, #0F53F2 95.54%);
+    color: white;
+    border-radius: 0.2rem;
+    width: 100%;
+    margin: 1rem auto;
+    margin-top: 9rem;
+}
+
+/* ======================================STORY SECTION============================================== */ 
+.story{
+    margin: 3.5rem 0;
+    height: 75vh;
+    width: 60%;
+    /* padding: 0.4rem 1rem; */
+        box-shadow: hsla(0, 0%, 83%, 0.575) 0px 0px 40px 1px;
+        border-radius: 1rem;
+    float: right;
+    overflow-y: scroll;
+    position : relative;
+    background-color: #E6EAF3;
+}
+
+.story::-webkit-scrollbar{
+    display: none;
+}
+
+.story p{
+    overflow-y: scroll;
+}
+
+.title{
+    width: 100%;
+    background: -webkit-linear-gradient(270deg, #84a9ff 1.79%, #0F53F2 95.54%);
+    padding: 1rem;
+    position: sticky;
+    top: 0px;
+    right: 0px;
+}
+
+@media screen and (max-width: 820px){
+
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form{
+        width: 90%;
+        margin: 1rem auto;
+        height: max-content;
+    }
+    .story{
+        width: 90%;
+        margin: 1rem auto;
+        height: max-content;
+    }
+}

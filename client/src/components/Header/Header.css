@@ -1,0 +1,12 @@
+.header{
+    max-width: 100%;
+    /* position: fixed; */
+    /* top: 0; */
+    box-shadow: 0 1px rgba(128, 128, 128, 0.295);
+    overflow-x: hidden;
+}
+.header > h1{
+    background: -webkit-linear-gradient(270deg, #92b3fe 1.79%, #0F53F2 95.54%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
